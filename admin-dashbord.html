@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-dark px-4">
+  <span class="navbar-brand">Restor App | Admin</span>
+  <button class="btn btn-outline-light btn-sm" onclick="logout()">
+    Cerrar sesión
+  </button>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container my-4">
+
+  <!-- MÉTRICAS -->
+  <div class="row text-center mb-4">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h6>Total órdenes</h6>
+          <h3 id="totalOrders">0</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h6>Órdenes pendientes</h6>
+          <h3 id="pendingOrders">0</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h6>Total del día</h6>
+          <h3 id="totalMoney">$0</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÓRDENES -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header">
+      Órdenes recientes
+    </div>
+    <div class="card-body p-0">
+      <table class="table table-striped mb-0">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Total</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="ordersTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PRODUCTOS -->
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          Crear producto
+        </div>
+        <div class="card-body">
+          <form id="productForm">
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" id="productName" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Precio</label>
+              <input type="number" id="productPrice" class="form-control" required>
+            </div>
+
+            <button class="btn btn-success w-100">
+              Agregar producto
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          Lista de productos
+        </div>
+        <ul class="list-group list-group-flush" id="productList"></ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- JS -->
+<script src="./js/admin.js"></script>
+</body>
+</html>

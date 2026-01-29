@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | RestorApp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="col-md-4 mx-auto card p-4">
+    <h4 class="text-center mb-3">RestorApp</h4>
+
+    <div id="error" class="alert alert-danger d-none">
+      Credenciales incorrectas
+    </div>
+
+    <input id="email" class="form-control mb-2" type="email" placeholder="Email">
+    <input id="password" class="form-control mb-3" type="password" placeholder="Contraseña">
+
+    <button id="loginBtn" class="btn btn-success w-100">Iniciar sesión</button>
+
+    <p class="text-center mt-3">
+      ¿No tienes cuenta? <a href="register.html">Registrarse</a>
+    </p>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

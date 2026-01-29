@@ -1,0 +1,160 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@restorapp.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "a932",
+      "name": "jero",
+      "email": "torreslopezjeronimo@gmail.com",
+      "password": "123",
+      "role": "user"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Classic Beef Burger",
+      "price": 8.99,
+      "image": "./img/hamburguesa1.png",
+      "category": "burgers"
+    },
+    {
+      "id": "0e47",
+      "name": "double bacon melt",
+      "price": 12.5,
+      "image": "./img/hamburguesa2.png",
+      "category": "burgers"
+    },
+    {
+      "id": "1f69",
+      "name": "papas",
+      "price": 3.99,
+      "image": "./img/potatoes.png",
+      "category": "papas"
+    },
+    {
+      "id": "aabe",
+      "name": "cola zero",
+      "price": 2.5,
+      "image": "./img/coca.png",
+      "category": "drinks"
+    },
+    {
+      "id": "d608",
+      "name": "donut box",
+      "price": 6,
+      "image": "./img/dona.png",
+      "category": "dulce"
+    },
+    {
+      "id": "2eb3",
+      "name": "pizza",
+      "price": 10
+    }
+  ],
+  "orders": [
+    {
+      "id": "05d6",
+      "userId": "a932",
+      "items": [
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        }
+      ],
+      "total": 44.95,
+      "status": "delivered",
+      "date": "2026-01-28T23:15:48.547Z"
+    },
+    {
+      "id": "048b",
+      "userId": "a932",
+      "items": [
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        },
+        {
+          "id": 1,
+          "name": "Classic Beef Burger",
+          "price": 8.99
+        }
+      ],
+      "total": 98.88999999999999,
+      "status": "delivered",
+      "date": "2026-01-28T23:17:30.875Z"
+    }
+  ]
+}

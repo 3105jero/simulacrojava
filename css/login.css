@@ -1,0 +1,54 @@
+/* Fondo de la pantalla de login */
+body {
+  background: linear-gradient(135deg, #198754, #28a745);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card del login / register */
+.card {
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos */
+h4 {
+  font-weight: 700;
+  color: #198754;
+}
+
+/* Inputs */
+input.form-control {
+  border-radius: 8px;
+}
+
+/* Botón principal */
+button.btn-success {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Link registro */
+a {
+  color: #198754;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Alertas */
+.alert {
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .card {
+    margin: 0 15px;
+  }
+}

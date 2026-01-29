@@ -1,0 +1,68 @@
+/* Fondo general */
+body {
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Cards del dashboard (métricas) */
+.card {
+  border-radius: 12px;
+  border: none;
+}
+
+.card h6 {
+  font-weight: 600;
+  color: #6c757d;
+}
+
+.card h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Tabla de órdenes */
+.table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table thead th {
+  vertical-align: middle;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* Select de estado */
+select.form-select {
+  cursor: pointer;
+}
+
+/* Formulario crear producto */
+input.form-control {
+  border-radius: 8px;
+}
+
+/* Botón crear producto */
+#createProduct {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    margin-top: 20px;
+  }
+}

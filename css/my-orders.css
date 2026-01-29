@@ -1,0 +1,77 @@
+/* Contenedor principal */
+.orders-container {
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+/* Título */
+.orders-container h2 {
+  font-weight: 700;
+  color: #198754;
+}
+
+/* Card de cada orden */
+.order-card {
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Estado de la orden */
+.order-status {
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+/* Estados */
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-preparing {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.status-delivered {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+/* Lista de productos */
+.order-products li {
+  font-size: 0.95rem;
+}
+
+/* Total */
+.order-total {
+  font-weight: 700;
+  color: #198754;
+}
+
+/* Fecha */
+.order-date {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 0 15px;
+  }
+}
