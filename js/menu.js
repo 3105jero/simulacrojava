@@ -1,19 +1,48 @@
-
-
 const API_URL = "http://localhost:3000";
 
+
+// PROTECCIÓN DE RUTA
+
 const session = JSON.parse(localStorage.getItem("session"));
+
 if (!session || session.role !== "user") {
   window.location.href = "login.html";
 }
 
 let cart = [];
 
+
+// EVENTOS INICIALES
+
 document.addEventListener("DOMContentLoaded", () => {
   loadProducts();
-  document.getElementById("confirmOrder").addEventListener("click", createOrder);
-  document.getElementById("logoutBtn").addEventListener("click", logout);
+
+  document
+    .getElementById("confirmOrder")
+    .addEventListener("click", createOrder);
+
+  document
+    .getElementById("logoutBtn")
+    .addEventListener("click", logout);
 });
+
+
+// DELEGACIÓN DE EVENTOS (CLAVE)
+
+document.getElementById("products").addEventListener("click", e => {
+  if (e.target.classList.contains("add-btn")) {
+    const btn = e.target;
+
+    addToCart(
+      btn.dataset.id,
+      btn.dataset.name,
+      Number(btn.dataset.price)
+    );
+  }
+});
+
+
+// CARGAR PRODUCTOS
 
 async function loadProducts() {
   const res = await fetch(`${API_URL}/products`);
@@ -25,13 +54,19 @@ async function loadProducts() {
   products.forEach(p => {
     container.innerHTML += `
       <div class="col-md-4 mb-3">
-        <div class="card">
-          <img src="${p.image || 'https://via.placeholder.com/150'}">
+        <div class="card h-100">
+          <img 
+            src="${p.image || "https://via.placeholder.com/150"}" 
+            class="card-img-top"
+          >
           <div class="card-body">
             <h6>${p.name}</h6>
             <p>$${p.price}</p>
-            <button class="btn btn-sm btn-success"
-              onclick="addToCart(${p.id}, '${p.name}', ${p.price})">
+            <button
+              class="btn btn-sm btn-success add-btn"
+              data-id="${p.id}"
+              data-name="${p.name}"
+              data-price="${p.price}">
               Add to order
             </button>
           </div>
@@ -40,6 +75,9 @@ async function loadProducts() {
     `;
   });
 }
+
+
+// CARRITO
 
 function addToCart(id, name, price) {
   cart.push({ id, name, price });
@@ -65,7 +103,7 @@ function renderCart() {
 
   totalSpan.textContent = total.toFixed(2);
 }
-
+// CREAR ORDEN
 async function createOrder() {
   if (cart.length === 0) return;
 
@@ -89,7 +127,7 @@ async function createOrder() {
   renderCart();
   alert("Order created!");
 }
-
+// LOGOUT
 function logout() {
   localStorage.removeItem("session");
   window.location.href = "login.html";
